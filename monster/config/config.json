@@ -1,0 +1,45 @@
+{
+    "api": {
+        "hosts": {
+            "api": "api.baidufe.com",
+            "mlsfe": "mlsfe.biz"
+        },
+        "timeout": 15000
+    },
+    "server": {
+        "compressTpl": true,
+        "defaultAction": "index/",
+        "hostDafault": {
+            "blog": "index",
+            "fehelper": "fehelper"
+        },
+        "hostname": "Baidufe.Linux",
+        "onPort": 8793,
+        "isDebug": true,
+        "referrer": "baidufe.com;doitbegin.com;fehelper.com;localhost"
+    },
+    "statics": {
+        "max_time": 3000,
+        "onPort": 8794,
+        "isDebug": true
+    },
+    "vhost": {
+        "localhost": {
+            "^\/fehelper" : "fehelper",
+            "^\/resume" : "resume",
+            ".*" : "blog"
+        },
+        "127.0.0.1": "resume"
+    },
+    "path": {
+        "webRoot": "../../",
+        "log": "/tmp/log/monster/"
+    },
+    "site": {
+        "JS_Defer": true,
+        "DOMAIN": {
+            "WWW": "/",
+            "STATIC": "http://localhost:8794/"
+        }
+    }
+}
